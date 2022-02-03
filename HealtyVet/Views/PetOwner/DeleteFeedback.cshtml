@@ -1,0 +1,14 @@
+﻿@model HealtyVet.ApplicationLogic.Data.Feedback
+@{
+    ViewData["Title"] = "DeleteFeedback";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>Vrei sa stergi comentariul?</h1>
+
+<div>
+    <form asp-action="DeleteFeedback">
+        <input type="hidden" asp-for="Description" />
+        <input type="submit" value="Delete" class="btn btn-outline-secondary" />
+       
+    </form>
+</div>

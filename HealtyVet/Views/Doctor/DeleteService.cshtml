@@ -1,0 +1,15 @@
+﻿@model HealtyVet.ApplicationLogic.Data.Servicii
+@{
+
+    ViewData["Title"] = "DeleteService";
+}
+
+<h1>Vrei sa stergi un serviciu?</h1>
+
+<div>
+    <form asp-action="DeleteService">
+        <input type="hidden" asp-for="Description" />
+        <input type="submit" value="Delete" class="btn btn-secondary" />
+        
+    </form>
+</div>

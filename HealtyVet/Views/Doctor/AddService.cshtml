@@ -1,0 +1,44 @@
+﻿@model HealtyVet.Models.DoctorModel.AddServiceViewModel
+@{
+    ViewData["Title"] = "AddService";
+}
+    <form asp-action="AddService" method="post">
+
+        <div class="row">
+            <div class="col-2">
+                Tip
+            </div>
+            <div class="col-10">
+                <input class="form-control" type="text" asp-for="Type" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                Pret
+            </div>
+            <div class="col-10">
+                <textarea class="form-control"
+                          asp-for=" Price">
+  
+            </textarea>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-2">
+                Descriere
+            </div>
+            <div class="col-10">
+                <textarea class="form-control"
+                          asp-for=" Description">
+  
+            </textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10"></div>
+            <div class="col-2">
+                <button type="submit" class="btn btn-secondary">Salveaza</button>
+            </div>
+        </div>
+    </form>

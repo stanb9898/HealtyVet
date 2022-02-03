@@ -1,0 +1,57 @@
+﻿@model HealtyVet.Models.DoctorModel.GetAllServicesViewModel
+@{
+    ViewData["Title"] = "IndexDoctor";
+}
+
+<h1>Servicii</h1>
+
+<br />
+<a href='@Url.Action("AddService", "Doctor")' class="btn btn-danger">Adauga serviciu</a>
+<table class="table" >
+    <thead class="thead-dark">
+        <tr>
+
+            <th style="text-align:center">
+                @Html.DisplayName("Type")
+            </th>
+            <th style="text-align:center">
+                @Html.DisplayName("Price")
+            </th>
+            <th style="text-align:center">
+                @Html.DisplayName("Description")
+            </th>
+
+            <th style="text-align:center"> Sterge serviciu</th>
+            <th style="text-align:center"> Update serviciu</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Services)
+        {
+        <tr>
+
+            <td style="text-align:center">
+
+                @Html.DisplayFor(model => item.Type)
+
+            </td>
+            <td style="text-align:center">
+
+                @Html.DisplayFor(model => item.Price)
+
+            </td>
+
+            <td style="text-align:center">
+                @Html.DisplayFor(model => item.Description)
+            </td>
+            <td style="text-align:center">
+                <a asp-action="DeleteService" asp-route-id="@item.Id" class="btn btn-light">Sterge servicii</a>
+            </td>
+            <td style="text-align:center">
+                <a asp-action="UpdateServicii" asp-route-id="@item.Id" class="btn btn-light">Update servicii</a>
+            </td>
+        </tr>
+
+        }
+    </tbody>
+</table>
